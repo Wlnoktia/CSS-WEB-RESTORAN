@@ -1,0 +1,352 @@
+/* style.css */
+
+/* ------------------------------------- */
+/* 1. LAYOUT UMUM & RESET */
+/* ------------------------------------- */
+body {
+    background: linear-gradient(to right, #e0b0ff, #bdaace); /* Ungu muda ke ungu tua */
+    color: #333; /* Warna teks default */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.page-container {
+    background-color: #fff; 
+    
+    /* 1. Atur lebar agar tidak full 100% */
+    width: 90%; 
+    
+    max-width: 960px;
+    
+    /* 2. Kunci: 20px (atas/bawah) dan auto (kiri/kanan) */
+    margin: 20px auto; 
+    
+    min-height: 100vh;
+    overflow: hidden; 
+    
+    /* Tambahan Styling (Optional, agar terlihat bagus) */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+}
+/* ------------------------------------- */
+/* 2. HEADER & NAVIGATION */
+/* ------------------------------------- */
+header {
+    padding: 30px 0 10px 0;
+    text-align: center; /* Memposisikan teks di tengah */
+}
+
+/* Penyesuaian warna header untuk setiap halaman */
+.header-index {
+    background: linear-gradient(to right, #e0b0ff, #81629e); /* Ungu muda ke ungu tua */
+}
+.header-menu {
+    background-color: #f7f3e8; /* Krem muda untuk Menu */
+}
+.header-kontak {
+    background-color: #e6ffe6; /* Hijau muda untuk Kontak */
+}
+
+.logo {
+    width: 200px; /* Lebar default logo */
+    margin-bottom: 5px;
+}
+.header-menu .logo, .header-kontak .logo {
+    width: 150px; /* Logo lebih kecil di halaman Menu dan Kontak */
+}
+
+h1 {
+    color: #0b1324; /* Warna judul utama */
+    font-size: 2.2em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 5px 0;
+}
+.header-menu h1, .header-kontak h1 {
+    font-size: 1.8em; /* Ukuran judul lebih kecil di halaman Menu dan Kontak */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Styling untuk NAVIGASI */
+nav {
+    /* Membuat nav menjadi flex container untuk menata item secara horizontal */
+    display: flex;
+    justify-content: center; /* Pusatkan item navigasi */
+    gap: 20px; /* Jarak antara setiap item */
+    padding: 10px 0;
+    margin-top: 10px; /* Jarak dari tagline */
+}
+
+nav a {
+    /* Gaya dasar tautan */
+    text-decoration: none; /* Hilangkan garis bawah */
+    color: #fff; /* Warna teks putih () */
+    background-color: #774c69; /* Warna latar belakang */
+    padding: 10px 20px; /* Padding di dalam "tombol" */
+    border-radius: 25px; /* Membuat sudut membulat seperti tombol pil */
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s; /* Efek transisi halus */
+    border: 2px solid #774c69; /* Border awal yang sama dengan background */
+}
+
+/* Menambahkan efek HOVER */
+nav a:hover {
+    background-color: #fff; /* Balikkan warna latar belakang menjadi putih */
+    color: #774c69; /* Balikkan warna teks menjadi ungu */
+    border: 2px solid #774c69; /* Pertahankan border ungu */
+    transform: translateY(-2px); /* Sedikit naik saat dihover untuk efek "pop" */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+}
+
+/* Mengatur ulang divider di header agar tidak berdekatan dengan nav baru */
+.header-index .divider {
+    margin: 10px auto;
+}
+
+
+.divider {
+    border: 0;
+    height: 1px;
+    background-color: #a9a9a9;
+    margin: 15px auto;
+    width: 85%;
+}
+
+/* ------------------------------------- */
+/* 3. KONTEN UTAMA (MAIN) */
+/* ------------------------------------- */
+main {
+    padding: 20px 50px;
+}
+
+h2 {
+    color: #333;
+    padding-bottom: 5px;
+    margin-top: 30px;
+    font-size: 1.5em;
+}
+
+/* Styling Khusus Index */
+/* Gaya untuk Judul Bagian (Tentang Kami & Layanan Kami) */
+.index-main h2 {
+    color: #2e8b57; /* Warna Hijau Laut/Sea Green (Konsisten dengan tema sehat) */
+    font-size: 1.8em; /* Ukuran font lebih besar */
+    border-bottom: 3px solid #e0b0ff; /* Garis bawah ungu muda */
+    padding-bottom: 5px; /* Jarak antara teks dan garis bawah */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-family: 'Georgia', serif; /* Menggunakan font yang lebih berkarakter untuk judul */
+}
+/* Gaya untuk Konten "Tentang Restoran Kami" */
+.index-main section p {
+    line-height: 1.6; /* Jarak antar baris agar mudah dibaca */
+    text-align: justify; /* Teks rata kanan-kiri (opsional) */
+    font-size: 1.05em;
+    color: #444; /* Warna teks abu-abu tua */
+}
+
+/* Gaya khusus untuk teks yang ditebalkan */
+.index-main section p strong {
+    color: #8a2be2; /* Penekanan dengan warna ungu */
+    font-weight: 700;
+}
+
+/* Gaya untuk Quote */
+.quote {
+    font-style: italic;
+    color: #2e8b57; /* Warna hijau untuk quote */
+    font-size: 1.2em;
+    text-align: center;
+    padding: 10px;
+    margin: 20px 0;
+    border-left: 5px solid #2e8b57; /* Garis vertikal sebagai penanda quote */
+    background-color: #f7fff7; /* Sedikit latar belakang agar menonjol */
+}
+/* Gaya untuk Konten "Layanan Kami" (Unordered List) */
+.index-main section ul {
+    list-style: none; /* Hilangkan bullet point default */
+    padding: 0;
+}
+
+.index-main section ul li {
+    padding: 8px 0;
+    margin-bottom: 5px;
+    border-bottom: 1px dashed #eee; /* Garis putus-putus antar item */
+    font-size: 1.1em;
+    color: #333;
+    /* Tambahkan icon kustom sebagai pengganti bullet point */
+    position: relative;
+    padding-left: 30px; /* Ruang untuk icon */
+}
+
+.index-main section ul li::before {
+    content: '★'; /* Menggunakan bintang atau emoji lain (misal: '✅', '🥗') */
+    color: #8a2be2; /* Warna ungu untuk icon */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 5px;
+    font-size: 1.2em;
+}
+
+/* Gaya khusus untuk item list yang ditebalkan (opsional) */
+.index-main section ul li:first-child {
+    font-weight: bold;
+}
+
+.resto-image {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+.quote {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+/* Styling Khusus Kontak */
+.kontak-main {
+    text-align: center;
+}
+.kontak-main h2 {
+    margin: 30px 0 20px 0;
+}
+
+/* ------------------------------------- */
+/* 4. TABEL (KHUSUS MENU) */
+/* ------------------------------------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+    vertical-align: middle;
+}
+th {
+    background-color: #ffe6b3; /* Header tabel utama */
+    color: #333;
+    text-align: center;
+}
+.table-title {
+    background-color: #fce8a6; /* Judul kategori */
+    font-weight: bold;
+    text-align: center;
+}
+.menu-img {
+    width: 80px; 
+    height: 80px;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+.harga {
+    text-align: center;
+}
+
+/* ------------------------------------- */
+/* 5. FORMULIR (KHUSUS KONTAK) */
+/* ------------------------------------- */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group input[type="text"], 
+.form-group input[type="email"], 
+.form-group textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+.form-group textarea {
+    resize: none;
+    min-height: 100px;
+}
+.submit-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+
+/* ------------------------------------- */
+/* 6. FOOTER */
+/* ------------------------------------- */
+.main-footer {
+    /* Menggunakan padding*/
+    padding-top: 20px; 
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.main-footer .contact-details {
+    margin-bottom: 10px;
+    color: #666; /* Warna abu-abu untuk detail kontak */
+}
+
+.main-footer .link-footer a {
+    color: #4b0082; /* Warna link sosial media (Ungu) */
+    text-decoration: none;
+}
+
+.main-footer .closing-message p {
+    /* Mengambil style menjadikannya properti kelas */
+    color: #2e8b57; /* Hijau Tua */
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.main-footer .copyright {
+    background-color: #e6ffe6; /* Latar belakang untuk baris copyright (Hijau muda) */
+    padding: 10px 0;
+    margin-top: 0; /* Menempelkan langsung ke pesan penutup */
+    color: #555;
+}
+.footer-info {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    font-size: 14px;
+}
+.link-footer a {
+    color: #4b0082;
+    text-decoration: none;
+}
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #e6ffe6;
+    font-size: 0.9em;
+}
+
+/* Latar belakang halaman body untuk halaman menu */
+.body-menu {
+    background-color: #f7f3e8;
+}
+/* Latar belakang halaman body untuk halaman kontak */
+.body-kontak {
+    background-color: #e6ffe6;
+}
